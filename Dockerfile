@@ -1,5 +1,5 @@
 FROM tomcat
 
-ADD tomcat-users.xml /usr/local/tomcat/conf/
-ADD manager.xml /usr/local/tomcat/conf/Catalina/localhost/
-ADD acckrs.war /usr/local/tomcat/webapps/
+ADD tomcat-users.xml $CATALINA_HOME/conf/
+ADD manager.xml $CATALINA_HOME/conf/Catalina/localhost/
+ADD acckrs.war $CATALINA_HOME/webapps/
