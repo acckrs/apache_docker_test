@@ -1,0 +1,96 @@
+/* CUSTOMIZE THE NAVBAR
+-------------------------------------------------- */
+
+/* Special class on .container surrounding .navbar, used for positioning it into place. */
+.navbar-wrapper {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 20;
+}
+
+/* Flip around the padding for proper display in narrow viewports */
+.navbar-wrapper > .container {
+  padding-right: 0;
+  padding-left: 0;
+}
+.navbar-wrapper .navbar {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.navbar-wrapper .navbar .container {
+  width: auto;
+}
+.navbar-font{
+  font-family:'Montserrat', sans-serif;
+}
+.lead-text {
+	font-family: 'Montserrat', sans-serif; 
+	color:#cc3300;
+}
+body {
+  margin-top:50px;
+}
+
+.page-header  {
+   background-color:#efeff5;
+}
+
+ #about {
+  padding-top:4em;
+  padding-bottom:2em;
+}
+#contact, #portfolio {
+	
+	padding-top: 4em;
+}
+
+#about >h2, #contact >h2{
+  color:#cc3300;
+}
+.my-footer { padding: 1em 0em 1em 0em; font-size: 0.8em; }
+
+.grow { transition: all .2s ease-in-out; }
+.grow:hover { transform: scale(1.05); }
+
+
+#search-input {
+        margin:0;
+        margin-top: 10px;
+        padding: 0;
+    }
+ 
+#search-input .search-query {
+        padding-right: 3px;
+        padding-right: 4px \9;
+        padding-left: 3px;
+        padding-left: 4px \9;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+ 
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+	
+     }
+ 
+#search-input button {
+        border: 0;
+        background: none;
+        /** belows styles are working good */
+        padding: 2px 5px;
+        margin-top: 2px;
+        position: relative;
+        left: -28px;
+        /* IE7-8 doesn't have border-radius, so don't indent the padding */
+        margin-bottom: 0;
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        border-radius: 3px;
+        color:#D9230F;
+    }
+ 
+    .search-query:focus + button {
+        z-index: 3;   
+    }

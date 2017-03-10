@@ -1,0 +1,129 @@
+﻿<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Aleksandar Krstic</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="http://acckrs.github.io/js/acckrs.js"></script>
+    <script src="http://acckrs.github.io/js/wikiViewer.js"></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="http://acckrs.github.io/stylesheets/acckrs.css" media="screen">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Aleksandar Krstic">
+</head>
+
+<body>
+    <!-- NAVBAR
+    ================================================== -->
+    <div class="navbar-wrapper">
+        <div class="container">
+            <a id="start"></a>
+            <nav class="navbar navbar-inverse navbar-fixed-top ">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                        <span id="tempC" class="navbar-brand navbar-font" data-nexttemp="f">°C</span>
+                        <span id="weatherDesc" class="navbar-brand navbar-font"></span><img id="weatherIcon" class="navbar-brand navbar-font" />
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right ">
+                            <li class="active navbar-font"><a href="../index.html#start">Home</a></li>
+                            <li><a class="navbar-font" href="../index.html#about">About</a></li>
+                            <li><a class="navbar-font" href="#contact">Contact</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle navbar-font" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-header">Present and Past</li>
+                                    <li><a class="navbar-font" href="../pentribute.html">Pen tribute</a></li>
+                                    <li><a class="navbar-font" href="http://codepen.io/acckrs/">Codepen.io/acckrs</a></li>
+                                    <li><a class="navbar-font" href="wikiViewer.html">Wikipedia viewer</a></li>
+                                    <li><a class="navbar-font" href="../TwichTV/twich.html">TwitchTV viewer</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Future </li>
+                                    <li><a class="navbar-font" href="#" data-toggle="tooltip" title="To be finished...">Challenge 4</a></li>
+                                    <li><a class="navbar-font" href="#" data-toggle="tooltip" title="To be finished...">Challenge 5</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <!-- header text -->
+        <div class="row text-center">
+            <div class="col-xs-12">
+                <h1 style="font-family:'Poiret One', cursive"> <i class="fa fa-wikipedia-w"></i>ikipedia viewer </h1>
+                <h4 class="animated fadeInDown lead-text">v1.1</h4>
+                <hr>
+            </div>
+        </div>
+        <!-- search form-->
+        <div class="container">
+            <div class="row">
+                <h2 style="font-family:'Poiret One', cursive">Search Wikipedia </h2>
+                <form id="search-form">
+                    <!-- <input id="searchText" type="text"  placeholder="Search" />-->
+                    <div id="search-input">
+                        <div class="input-group col-md-12">
+                            <input id="searchText" type="text" class="search-query form-control" placeholder="Search" />
+                            <span class="input-group-btn">
+                                <button id="submit-btn" class="btn btn-danger" type="button">
+                                    <span class="glyphicon glyphicon-search"></span>
+                            </button>
+                            </span>
+                        </div>
+                    </div>
+                    <!--<button id="submit-btn" type="button">Search</button>-->
+                </form>
+            </div>
+        </div>
+        <!--result-->
+        <div class="wikipedia-container row" id="quote">
+            <div class="col-xs-12">
+                <h3 id="wikipedia-header" class="lead-text"> </h3>
+                <ul id="wikipedia-links">Type in your search, press Enter and find relevant Wikipedia articles here, or press
+                    <a id="randomQuote" target="_blank" href="https://en.wikipedia.org/wiki/Special:Random">
+                        here
+                        </a> to get random Wikipedia article</ul>
+            </div>
+        </div>
+        <!-- social icons -->
+        <div class="row " id="contact">
+            <div class="col-xs-12">
+                <!-- social buttons -->
+                <div class="text-center">
+                    <a class="grow btn btn-primary" href="https://www.freecodecamp.com/acckrs">Free Code Camp</a>
+                    <a class="grow btn btn-primary" href="https://rs.linkedin.com/in/aleksandar-krstic-5aab8a5">LinkedIn</a>
+                    <a class="grow btn btn-primary" href="https://github.com/acckrs">Github</a>
+                    <a class="grow btn btn-primary" href="mailto:acckrs@gmail.com" target="_top">e-mail</a>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div id="footer_text">
+            <hr>
+        </div>
+        <div class="row" id="footer">
+            <div class="col-xs-12 text-center my-footer">
+                <p>&copy; Aleksandar Krstić</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

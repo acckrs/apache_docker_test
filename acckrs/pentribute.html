@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Aleksandar Krstic</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/acckrs.js"></script>
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Poiret+One&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <link href="http://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="stylesheets/acckrs.css" media="screen">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Aleksandar Krstic">
+</head>
+
+<body>
+    <!-- NAVBAR
+================================================== -->
+    <div class="navbar-wrapper">
+        <div class="container">
+            <a id="start"></a>
+            <nav class="navbar navbar-inverse navbar-fixed-top ">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            </button>
+                        <span id="tempC" class="navbar-brand navbar-font" data-nexttemp="f">°C</span>
+                        <span id="weatherDesc" class="navbar-brand navbar-font"></span><img id="weatherIcon" class="navbar-brand navbar-font" />
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav navbar-right ">
+                            <li class="active navbar-font"><a href="index.html#start">Home</a></li>
+                            <li><a class="navbar-font" href="index.html#about">About</a></li>
+                            <li><a class="navbar-font" href="#contact">Contact</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle navbar-font" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Portfolio <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li class="dropdown-header">Present and Past</li>
+                                    <li><a class="navbar-font" href="pentribute.html">Pen tribute</a></li>
+                                    <li><a class="navbar-font" href="http://codepen.io/acckrs/">Codepen.io/acckrs</a></li>
+                                    <li><a class="navbar-font" href="wikipedia_viewer/wikiViewer.html">Wikipedia viewer</a></li>
+                                    <li><a class="navbar-font" href="TwichTV/twich.html">TwitchTV viewer</a></li>
+                                    <li role="separator" class="divider"></li>
+                                    <li class="dropdown-header">Future </li>
+                                    <li><a class="navbar-font" href="#" data-toggle="tooltip" title="To be finished...">Challenge 4</a></li>
+                                    <li><a class="navbar-font" href="#" data-toggle="tooltip" title="To be finished...">Challenge 5</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <div class="container">
+        <!-- Pen tribute    -->
+        <div class="container-fluid">
+            <div class="container">
+                <div class="jumbotron">
+                    <div class="row">
+                        <div id="page_header" class="col-xs-12 text-center page-header">
+                            <h1 id="text1" style="font-family:lobster">Pen Tribute</h1>
+                            <h3 id="text2">FreeCodeCamp Challenge Tribute Page</h3>
+                        </div>
+                        <div id="telo" class="col-xs-12">
+                            <div id="slika-olovke" class="thumbnail grow">
+                                <img class="img-responsive" src="img/Caran-dAche-1010-Diamonds-Limited-Edition-Fountain-Pen.jpg" alt="Gold Tibaldi Pen">
+                                <div id="tekst-ispod-slike" class="caption text-center">A pen (Latin: penna, feather) is a writing implement used to apply ink to a surface, such as paper, for writing or drawing.</div>
+                            </div>
+                            <div id="summary_text">Historically,
+                                <a href="https://en.wikipedia.org/wiki/Reed_pen" target="_blank">reed pens</a>, quill pens, and dip pens were used, with a nib dipped in ink. Technical pens such as the Rapidograph allow precise adjustment of line width.
+                                Modern types also include ballpoint, rollerball, fountain, and felt or ceramic tip pens.
+                            </div>
+                            <div id="history_title">The History of Pen</div>
+                            <div id="history_text">
+                                <ul>
+                                    <li>Ancient Egyptians had developed writing on papyrus scrolls when scribes used thin reed brushes or reed pens from the Juncus maritimus or sea rush. The reed pen, generally made from bamboo, is still used in some parts
+                                        of Pakistan by young students and is used to write on small boards made of timber.
+                                    </li>
+                                    <li>The reed pen survived until papyrus was replaced by animal skins, vellum and parchment, as a writing surface. The smoother surface of skin allowed finer, smaller writing by the quill pen, derived from the flight feather.
+                                        After the fall of the Roman Empire, Europeans had difficulty in obtaining reeds and began to use quills. Quill pens were still widely used in the 18th century, and were used to write and sign the Constitution of
+                                        the United States in 1787.</li>
+                                    <li>A copper nib was found in the ruins of Pompeii showing that metal nibs were used in the year 79. A metal pen point was patented in 1803 but the patent was not commercially exploited. A patent for the manufacture of
+                                        metal pens was advertised for sale by Bryan Donkin in 1811.John Mitchell of Birmingham started to mass-produce pens with metal nibs in 1822, and thereafter the quality of steel nibs had improved enough that dip
+                                        pens with metal nibs came into generalized use.</li>
+                                    <li>The earliest historical record of a pen employing a reservoir dates back to the 10th century. In 953, Ma'ād al-Mu'izz, the Fatimid Caliph of Egypt, demanded a pen which would not stain his hands or clothes, and was
+                                        provided with a pen which held ink in a reservoir and delivered it to the nib.A later reservoir pen was developed in 1636. In his Deliciae Physico-Mathematicae (1636), German inventor Daniel Schwenter described
+                                        a pen made from two quills. One quill served as a reservoir for ink inside the other quill. The ink was sealed inside the quill with cork. Ink was squeezed through a small hole to the writing point. In 1809, Bartholomew
+                                        Folsch received a patent in England for a pen with an ink reservoir.</li>
+                                    <li>While a student in Paris, Romanian Petrache Poenaru invented the fountain pen, which the French Government patented in May 1827. Fountain pen patents and production then increased in the 1850s, especially steel pens
+                                        produced by John Mitchell.</li>
+                                </ul>
+                            </div>
+                            <div id="quote_text">
+                                <blockquote>
+                                    <p>The pen is mightier than the sword if the sword is very short, and the pen is very sharp.
+                                    </p>
+                                    <footer>Terry Pratchett</footer>
+                                </blockquote>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="footer_text">
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <!-- social icons -->
+        <div class="row " id="contact">
+            <div class="col-xs-12">
+                <!-- social buttons -->
+
+
+                <div class="text-center">
+                    <a class="grow btn btn-primary" href="https://www.freecodecamp.com/acckrs">Free Code Camp</a>
+                    <a class="grow btn btn-primary" href="https://rs.linkedin.com/in/aleksandar-krstic-5aab8a5">LinkedIn</a>
+                    <a class="grow btn btn-primary" href="https://github.com/acckrs">Github</a>
+                    <a class="grow btn btn-primary" href="mailto:acckrs@gmail.com" target="_top">e-mail</a>
+                </div>
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="row" id="footer">
+            <div class="col-xs-12 text-center my-footer">
+                <p>&copy; Aleksandar Krstić</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,6 +1,4 @@
-FROM tomcat
+FROM httpd:2.4
 
 
-ADD tomcat-users.xml $CATALINA_HOME/conf/
-ADD manager.xml $CATALINA_HOME/conf/Catalina/localhost/
-ADD acckrs.war $CATALINA_HOME/webapps/
+COPY ./acckrs/ /usr/local/apache2/htdocs/
