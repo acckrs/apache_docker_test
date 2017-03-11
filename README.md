@@ -5,5 +5,5 @@ This image will add contents of folder `/acckrs/` to base image of `apache/httpd
 In order to publish web page to port 8787, type 
 `docker run -itd -p 8787:8080 acckrs/apache_docker_test`
 
-To pul this docker image type:
+To pull this docker image type:
 `docker pull acckrs/apache_docker_test`
